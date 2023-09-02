@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Restration</h2>
+        <form action="registration_process.php" method="POST">
+		<fieldset>
+		    <legend>Personal Details</legend>
+            <label for="fname"><b>Name</b></label>
+            <input type="text" placeholder="Enter your name" name="name" required>
+
+            <label for="sname"><b>Surname</b></label>
+            <input type="text" placeholder="Enter your surname" name="surname" required>
+			
+			<label for="identity"><b>Enter ID Number:</b></label>
+            <input type="text" id="idNumber" name="identity" placeholder="ID Number">
+			
+			
+
+            <label for="sname"><b>Create password</b></label>
+            <input type="password" placeholder="Create password" name="password" required>
+
+            <label for="sname"><b>Address</b></label>
+            <input type="text" placeholder="Enter your Address" name="address" required>
+
+            <br><br><label for="dob"><b>Date of Birth:</b></label>
+            <input type="date" id="dob" name="dob" required>
+
+            </fieldset>
+            <br><br><label for="disabled"><b>Any disability</b></label>
+			Yes<input type="checkbox" id="checkbox" name="yes" value="Yes">
+			No<input type="checkbox" id="checkbox" name="no" value="No">
+
+            <br><br><label for="explain">If Yes, explain</label>
+			<textarea id="myTextarea" name="textarea" rows="2" cols="20">
+            </textarea>
+
+            
+			
+            <button><a href="contactdet.html" style="text-decoration: none; color: black;">Next</a></button>
+        </form>
+        <div class="forgot-password">
+            <button><a href="log in.html"  style="text-decoration: none; color: black;">Log in</a></button>
+        </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    
+</head>
+<body>
+<style>
+    
+	
+        *{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        #header{
+            width: 100%;
+            min-height: 50px;
+            background: gray;
+            text-align: center;
+            line-height: 50px;
+        }
+        #clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #navigation{
+            width: 100%;
+            min-height: 60px;
+            background-color: lightgray;
+        }
+        #nav a{
+            text-decoration: none;
+            color: black;
+            background: gray;
+            float: right;
+            margin-top: 1rem;
+            margin-right: 10px;
+            padding: 0.3rem 1rem;
+            &:hover{
+                color: white;
+                background: black;
+            }
+        }
+
+        #home{
+            width: 100%;
+            min-height: 70vh;
+        }
+        
+       
+        #home-right{
+            width: 55%;
+            min-height: 70vh;
+            float: right;
+
+            text-align: right;
+            
+            
+
+            
+        }
+      
+footer {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+  }
+  
+</style>
+    <div id="header"><H3>navigation</H3></div>
+    <div id="navigation" class="clearfix">
+        <img src="images/logo.jpg" alt="logo-pic" style="width: 15%; height: 50px; padding-top: 1rem; float: left;">
+        <div id="nav">
+            <a href="index.html">Home</a>
+            <a href="#">Our services</a>
+            <a href="#">News</a>
+            <a href="#">Contact us</a>
+        </div>
+    </div>
+    <section id="home" class="clearfix">
+
+        <div id="home-left">
+
+
+
+    <br><br><h3>Upload and Display Photo</h3>
+    
+    <!-- Form for uploading a photo -->
+    <form id="upload-form" action="#" method="post" enctype="multipart/form-data">
+        <input type="file" id="photo-input" name="photo" accept="image/*" required>
+        <input type="submit" value="Upload Photo">
+    </form>
+
+    <!-- Display the uploaded photo -->
+    <div id="photo-container">
+        <h2>Uploaded Photo:</h2>
+        <img id="displayed-photo" src="#" alt="Uploaded Photo">
+    </div>
+
+    <!-- JavaScript to display the uploaded photo -->
+    <script>
+        const photoInput = document.getElementById('photo-input');
+        const displayedPhoto = document.getElementById('displayed-photo');
+
+        photoInput.addEventListener('change', function () {
+            const file = photoInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    displayedPhoto.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+        </div>
+
+        <div id="home-right">
+
+
+            <label for="idnum">ID NUMBER</label>
+			<input type="idnum" id="number1" placeholder="Enter ID Number...">
+
+            
+			<a href="log in.html">Apply</a>
+
+        </div>
+    </section>
+    <div id="footer"><h3>Footer</h3></div>
+</body>
+</html>

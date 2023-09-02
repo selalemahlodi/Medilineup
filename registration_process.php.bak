@@ -1,0 +1,31 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dbase";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $sql = "INSERT INTO patient ('name', 'surname', 'identity','password','address','dod','disability','textarea')
+  VALUES (name, surname, identity,password,address,dod,disability,textarea)";
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "New record created successfully";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+} 
+
+$name=$_POST['name'];
+$username=$_POST['surname'];
+$identity=$_POST['identity'];
+$password=$_POST['password'];
+$address=$_POST['address'];
+$dod=$_POST['dod'];
+$disability=$_POST['disability'];
+$textarea=$_POST['textarea'];
+
+
+$conn = null;
+?>

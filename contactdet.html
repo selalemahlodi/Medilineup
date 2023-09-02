@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Restration</h2>
+        <form action="login_process.php" method="POST">
+		<fieldset>
+		    <legend>Contact Details</legend>
+            <label for="pnum"><b>Names</b></label>
+            <input type="text" placeholder="Enter your cellphone number" name="name" required>
+
+            <label for="pnum"><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter your surname" name="pnum" required>
+			
+    <h1>Address</h1>
+    <form action="process_address.php" method="POST">
+        <label for="street">Street Address:</label>
+        <input type="text" id="street" name="street" required><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="state">State/Province:</label>
+        <input type="text" id="state" name="state" required><br><br>
+
+        <label for="postal_code">Postal Code:</label>
+        <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <input type="submit" value="Submit">
+		
+       </textarea>
+			
+			
+            <button><a href="nextofkin.html">Next</a></button>
+        </form>
+</body>
+</html>
+
+
+
